@@ -44,6 +44,7 @@ class ViewController: UIViewController {
                 for document in QuerySnapshot!.documents {
                     print("\(document.documentID) => \(document.data())")
                     self.FirebaseLabel.text = "\(document.data())"
+                    print("Det virker")
                 }
             }
         }
