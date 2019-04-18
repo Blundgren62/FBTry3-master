@@ -21,33 +21,29 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         let db = Firestore.firestore()
- 
-        // Add a new document with a generated ID
-        var ref: DocumentReference? = nil
-        ref = db.collection("users").addDocument(data: [
-            "first": "Alan",
-            "middle": "Mathison",
-            "last": "Turing",
-            "born": 1912
-        ]) { err in
-            if let err = err {
-                print("Error adding document: \(err)")
-            } else {
-                print("Document added with ID: \(ref!.documentID)")
-            }
+
+        db.collection("opskrifter").addSnapshotListener { (snapshot, _) in
+                guard let snapshot = snapshot else { return }
+                for document in snapshot.documents {
+                    print(document.data())
+                }
         }
         
-        db.collection("users").getDocuments { (QuerySnapshot, err) in
+  /*
+        // Add a new document in collection "cities"
+        db.collection("opskrifter").document("Frikadeller1").setData([
+            "name": "Mors frikadeller",
+            "ingridiens": "Løg",
+            "country": "DK"
+        ]) { err in
             if let err = err {
-                print("error getting documents: \(err)")
-            }else {
-                for document in QuerySnapshot!.documents {
-                    print("\(document.documentID) => \(document.data())")
-                    self.FirebaseLabel.text = "\(document.data())"
-                    print("Det virker")
-                }
+                print("Error writing document: \(err)")
+            } else {
+                print("Document successfully written!")
             }
         }
+    */
+
 
     }
 
