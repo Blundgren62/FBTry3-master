@@ -10,11 +10,13 @@ import UIKit
 import Firebase
 
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
     
     @IBOutlet weak var FirebaseLabel: UILabel!
     
-
+    
+    var inputTableView = ["Hej"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,6 +48,19 @@ class ViewController: UIViewController {
 
 
     }
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return inputTableView.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        
+        cell.textLabel?.text = inputTableView[indexPath.row]
+        
+        return cell
+    }
 
-}
+}// end
 
