@@ -13,6 +13,8 @@
 		4D3BFE6E22550F00004263DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D3BFE6D22550F00004263DA /* Assets.xcassets */; };
 		4D3BFE7122550F00004263DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D3BFE6F22550F00004263DA /* LaunchScreen.storyboard */; };
 		4D3BFE792255108A004263DA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4D3BFE782255108A004263DA /* GoogleService-Info.plist */; };
+		4D54C3B722784183002BC293 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D54C3B622784183002BC293 /* MasterViewController.swift */; };
+		4D54C3B9227841F0002BC293 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D54C3B8227841F0002BC293 /* Task.swift */; };
 		B4100F7D0C8C0C001D044820 /* Pods_FBTry3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E34DFE9D2C19E7281CC43D5D /* Pods_FBTry3.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +27,8 @@
 		4D3BFE7022550F00004263DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4D3BFE7222550F00004263DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D3BFE782255108A004263DA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4D54C3B622784183002BC293 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		4D54C3B8227841F0002BC293 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		B41B826FE16204F75F23398D /* Pods-FBTry3.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FBTry3.debug.xcconfig"; path = "Target Support Files/Pods-FBTry3/Pods-FBTry3.debug.xcconfig"; sourceTree = "<group>"; };
 		D951EACC6D288A01F5703A9B /* Pods-FBTry3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FBTry3.release.xcconfig"; path = "Target Support Files/Pods-FBTry3/Pods-FBTry3.release.xcconfig"; sourceTree = "<group>"; };
 		E34DFE9D2C19E7281CC43D5D /* Pods_FBTry3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FBTry3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,6 +83,8 @@
 				4D3BFE6D22550F00004263DA /* Assets.xcassets */,
 				4D3BFE6F22550F00004263DA /* LaunchScreen.storyboard */,
 				4D3BFE7222550F00004263DA /* Info.plist */,
+				4D54C3B622784183002BC293 /* MasterViewController.swift */,
+				4D54C3B8227841F0002BC293 /* Task.swift */,
 			);
 			path = FBTry3;
 			sourceTree = "<group>";
@@ -224,8 +230,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D54C3B9227841F0002BC293 /* Task.swift in Sources */,
 				4D3BFE6922550EFE004263DA /* ViewController.swift in Sources */,
 				4D3BFE6722550EFE004263DA /* AppDelegate.swift in Sources */,
+				4D54C3B722784183002BC293 /* MasterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
