@@ -20,7 +20,7 @@ class MasterViewController: UITableViewController {
     
     
     fileprivate func baseQuery() -> Query {
-        return Firestore.firestore().collection("Task").limit(to: 50)
+        return Firestore.firestore().collection("Hus").limit(to: 50)
         
     }
     

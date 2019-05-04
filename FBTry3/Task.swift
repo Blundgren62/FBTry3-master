@@ -9,7 +9,7 @@
 import Foundation
 
 struct Task{
-    var name:String
+    var name: String
     var done: Bool
     var id: String
     
@@ -23,7 +23,7 @@ struct Task{
 
 extension Task{
     init?(dictionary: [String : Any], id: String) {
-        guard   let name = dictionary["name"] as? String,
+        guard let name = dictionary["name"] as? String,
             let done = dictionary["done"] as? Bool
             else { return nil }
         
