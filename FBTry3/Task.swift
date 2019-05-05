@@ -8,6 +8,7 @@
 
 import Foundation
 
+// Task = opgave
 struct Task{
     var name: String
     var done: Bool

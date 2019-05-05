@@ -18,12 +18,13 @@ class MasterViewController: UITableViewController {
     public var tasks: [Task] = []
     private var listener : ListenerRegistration!
     
-    
+    // Query = Forespørgsel
     fileprivate func baseQuery() -> Query {
         return Firestore.firestore().collection("Hus").limit(to: 50)
         
     }
-    
+    // Query: Query? = er der noget i Query? "måske udpak"
+    // hvis der er så skal lytteren fjernes
     fileprivate var query: Query? {
         didSet {
             if let listener = listener {
