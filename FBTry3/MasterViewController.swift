@@ -20,7 +20,7 @@ class MasterViewController: UITableViewController {
     
     // Query = Forespørgsel
     fileprivate func baseQuery() -> Query {
-        return Firestore.firestore().collection("Hus").limit(to: 50)
+        return Firestore.firestore().collection("Bil").limit(to: 50)
         
     }
     // Query: Query? = er der noget i Query? "måske udpak"

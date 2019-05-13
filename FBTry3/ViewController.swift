@@ -10,6 +10,8 @@ import UIKit
 import Firebase
 
 
+
+
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     
@@ -20,6 +22,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         // Do any additional setup after loading the view.
         
         let db = Firestore.firestore()
