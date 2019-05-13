@@ -130,10 +130,10 @@
             </objects>
             <point key="canvasLocation" x="170" y="107"/>
         </scene>
-        <!--View Controller-->
+        <!--Add ThrougthVC-->
         <scene sceneID="Yvm-5f-lup">
             <objects>
-                <viewController id="7Q7-6j-Vda" sceneMemberID="viewController">
+                <viewController id="7Q7-6j-Vda" customClass="AddThrougthVC" customModule="FBTry3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9eX-7u-qfa">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -148,6 +148,9 @@
                                     <segment title="Crazy"/>
                                     <segment title="Crazy"/>
                                 </segments>
+                                <connections>
+                                    <action selector="categoryChanged:" destination="7Q7-6j-Vda" eventType="valueChanged" id="muM-Ff-biP"/>
+                                </connections>
                             </segmentedControl>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="User name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gbL-BD-9tY">
                                 <rect key="frame" x="20" y="124" width="335" height="20"/>
@@ -165,30 +168,46 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7GL-Ph-dps">
-                                <rect key="frame" x="164" y="340" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7GL-Ph-dps">
+                                <rect key="frame" x="147.5" y="264" width="80" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="xPb-1u-CpA"/>
+                                </constraints>
+                                <state key="normal" title="Post">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="postBtnTapped:" destination="7Q7-6j-Vda" eventType="touchUpInside" id="7ne-v4-5pD"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="7GL-Ph-dps" firstAttribute="top" secondItem="lRk-U1-dpw" secondAttribute="bottom" constant="8" id="56E-YM-jKY"/>
                             <constraint firstItem="oNJ-Nm-qr0" firstAttribute="trailing" secondItem="pmC-6G-kw9" secondAttribute="trailing" constant="20" id="5By-eH-3z3"/>
                             <constraint firstItem="gbL-BD-9tY" firstAttribute="leading" secondItem="oNJ-Nm-qr0" secondAttribute="leading" constant="20" id="5Hk-n7-WVr"/>
                             <constraint firstItem="lRk-U1-dpw" firstAttribute="leading" secondItem="oNJ-Nm-qr0" secondAttribute="leading" constant="20" id="6lF-bf-aP5"/>
                             <constraint firstItem="pmC-6G-kw9" firstAttribute="top" secondItem="oNJ-Nm-qr0" secondAttribute="top" constant="16" id="7FF-J4-d3r"/>
                             <constraint firstItem="gbL-BD-9tY" firstAttribute="top" secondItem="pmC-6G-kw9" secondAttribute="bottom" constant="12" id="IYm-I8-A9N"/>
                             <constraint firstItem="pmC-6G-kw9" firstAttribute="leading" secondItem="oNJ-Nm-qr0" secondAttribute="leading" constant="20" id="KpU-9w-yca"/>
+                            <constraint firstItem="7GL-Ph-dps" firstAttribute="centerX" secondItem="lRk-U1-dpw" secondAttribute="centerX" id="OQ2-KZ-xb1"/>
                             <constraint firstItem="oNJ-Nm-qr0" firstAttribute="trailing" secondItem="gbL-BD-9tY" secondAttribute="trailing" constant="20" id="WQk-c4-fK6"/>
                             <constraint firstItem="oNJ-Nm-qr0" firstAttribute="trailing" secondItem="lRk-U1-dpw" secondAttribute="trailing" constant="20" id="g9t-2Y-LvI"/>
                             <constraint firstItem="lRk-U1-dpw" firstAttribute="top" secondItem="gbL-BD-9tY" secondAttribute="bottom" constant="12" id="o1u-uo-3R9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="oNJ-Nm-qr0"/>
                     </view>
+                    <connections>
+                        <outlet property="CategorySegment" destination="pmC-6G-kw9" id="dux-9R-bS6"/>
+                        <outlet property="ThoughtTxt" destination="lRk-U1-dpw" id="U8m-OO-hIo"/>
+                        <outlet property="UsernameTxt" destination="gbL-BD-9tY" id="v8T-Fj-H5a"/>
+                        <outlet property="postBtn" destination="7GL-Ph-dps" id="8rx-Ak-gmM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gb7-Tr-rMK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="887" y="105"/>
+            <point key="canvasLocation" x="885.60000000000002" y="104.7976011994003"/>
         </scene>
         <!--Master View Controller-->
         <scene sceneID="Ehh-0H-Eyn">
