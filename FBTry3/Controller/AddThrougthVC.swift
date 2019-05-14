@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddThrougthVC: UIViewController {
+class AddThrougthVC: UIViewController, UITextViewDelegate {
 
     // Outlets
     
@@ -25,8 +25,14 @@ class AddThrougthVC: UIViewController {
         ThoughtTxt.layer.cornerRadius = 4
         ThoughtTxt.text = "Det virker meget godt"
         ThoughtTxt.textColor = .lightGray
+        ThoughtTxt.delegate = self
         
         // Do any additional setup after loading the view.
+    }
+    
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        textView.text = ""
+        textView.textColor = .darkGray
     }
     
     @IBAction func categoryChanged(_ sender: Any) {
